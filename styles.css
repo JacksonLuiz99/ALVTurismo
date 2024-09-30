@@ -4,9 +4,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  
     background-color: #f0f8ff; /* Cor de fundo suave, semelhante ao céu */
 }
 
