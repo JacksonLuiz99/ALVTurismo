@@ -1,0 +1,28 @@
+.hero {
+    background-image: url('https://img.freepik.com/fotos-gratis/bela-praia-tropical-mar-e-mar-com-palmeira-de-coco-na-hora-do-nascer-do-sol_74190-7454.jpg?t=st=1727662832~exp=1727666432~hmac=5cfa4afa62091586d975337d739e05f86b6fa3aa288962de91e1e0c13a2b54ba&w=996'); /* Imagem de fundo */
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    color: #333;
+}
+
+#navbar {
+    justify-content: flex-end; /* Alinha os itens da navbar à direita */
+}
+
+section{
+    border: red 1px dashed;
+}
+
+div{
+    border: rgb(99, 4, 232) 1px solid;
+}
