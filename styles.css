@@ -14,13 +14,13 @@ body {
     height: 60vh;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: #f0f8ff;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
-}
+ }
 
 .logoAlv{
     border-radius: 8%;
@@ -33,6 +33,9 @@ body {
     border-radius: 10px; /* Cantos arredondados */
 }
 
+#about{
+    text-align: center;
+}
 .section:nth-of-type(odd) {
     background-color: rgba(255, 255, 255, 0.9); /* Branco suave */
 }
