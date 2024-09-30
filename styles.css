@@ -4,9 +4,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-  
-    background-color: #f0f8ff; /* Cor de fundo suave, semelhante ao céu */
-}
+ }
 
 /* Hero Section */
 .hero {
@@ -33,9 +31,7 @@ body {
     border-radius: 10px; /* Cantos arredondados */
 }
 
-#about{
-    text-align: center;
-}
+
 .section:nth-of-type(odd) {
     background-color: rgba(255, 255, 255, 0.9); /* Branco suave */
 }
@@ -53,7 +49,7 @@ h2 {
 /* Ícones das Redes Sociais */
 .social-icons a {
     margin-right: 15px;
-    color: #007bff;
+    color: #6705a8;
     transition: transform 0.3s ease;
 }
 
