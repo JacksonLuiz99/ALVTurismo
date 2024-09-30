@@ -1,28 +1,81 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Cor de fundo suave, semelhante ao céu */
+}
+
+/* Hero Section */
 .hero {
-    background-image: url('https://img.freepik.com/fotos-gratis/bela-praia-tropical-mar-e-mar-com-palmeira-de-coco-na-hora-do-nascer-do-sol_74190-7454.jpg?t=st=1727662832~exp=1727666432~hmac=5cfa4afa62091586d975337d739e05f86b6fa3aa288962de91e1e0c13a2b54ba&w=996'); /* Imagem de fundo */
+    background-image: url('https://img.freepik.com/fotos-gratis/bela-praia-tropical-mar-e-mar-com-palmeira-de-coco-na-hora-do-nascer-do-sol_74190-7454.jpg?t=st=1727662832~exp=1727666432~hmac=5cfa4afa62091586d975337d739e05f86b6fa3aa288962de91e1e0c13a2b54ba&w=996');
     height: 60vh;
     background-size: cover;
     background-position: center;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
+/* Seções */
 .section {
     padding: 60px 0;
+    transition: background-color 0.3s ease;
+    border-radius: 10px; /* Cantos arredondados */
 }
 
+.section:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.9); /* Branco suave */
+}
+
+.section:nth-of-type(even) {
+    background-color: rgba(0, 123, 255, 0.1); /* Azul claro */
+}
+
+/* Títulos */
+h2 {
+    color: #007bff; /* Azul para remeter ao mar */
+    margin-bottom: 20px;
+}
+
+/* Ícones das Redes Sociais */
 .social-icons a {
     margin-right: 15px;
+    color: #007bff;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 0;
     color: #333;
 }
 
-#navbar {
-    justify-content: flex-end; /* Alinha os itens da navbar à direita */
-}
-
-section{
-    border: red 1px dashed;
-}
-
 div{
-    border: rgb(99, 4, 232) 1px solid;
+    border: #df8200 1px solid;
+}
+section{
+    border: solid 1px #00008b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Ajusta o tamanho do título em telas menores */
+    }
 }
