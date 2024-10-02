@@ -39,11 +39,12 @@ body {
 }
 
 .carousel-item img {
-    width: 350px;        /* Faz a imagem ocupar toda a largura do container */
-    height: 100%;      /* Mantém a proporção original da imagem */
-    object-fit: cover; /* Faz a imagem cobrir o container sem distorção */
-}
-
+    width: 100%;          /* Ocupa 100% do espaço do item do carrossel */
+    height: auto;        /* Mantém a proporção da imagem */
+    max-height: 800px;   /* Ajuste a altura máxima conforme necessário */
+    object-fit: cover;   /* Corta a imagem para preencher o espaço sem distorção */
+  }
+  
 
 /* Títulos */
 h2, h3{
