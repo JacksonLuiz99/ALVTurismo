@@ -1,28 +1,36 @@
+:root {
+    --main-bg-color: #1a3c73;
+    --text-color: #ffffff;
+    --highlight-color: yellow;
+    --social-icon-color: rebeccapurple;
+    --hover-color: #13df00;
+}
+
 /* Estilos Gerais */
 body {
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #dff2f1;
- }
+}
 
 /* Hero Section */
 .hero {
     background-image: url('img/alvLogoBg.png');
-    height: 60vh; /* Você pode considerar usar uma unidade percentual ou 'auto' */
-    min-height: 300px; /* Adiciona uma altura mínima para telas menores */
+    height: 60vh;
+    min-height: 300px;
     background-size: cover;
     background-position: center;
     color: #f0f8ff;
-    display: flex; /* Mudando de inline-block para flex */
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
 
-.logoAlv{
+.logoAlv {
     border-radius: 8%;
 }
 
@@ -30,73 +38,71 @@ body {
 .section {
     padding: 60px 0;
     transition: background-color 0.3s ease;
-    border: none;
 }
 
-.menu{
-    background-color: #1a3c73;
-    color: #ffffff;
-    
+.menu,
+.contato,
+.sobre,
+.passeio {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#navbarNav{
-     justify-content: end;/*menu alinhado no final */
-
+#navbarNav {
+    justify-content: end;
 }
+
 .carousel-item img {
-    width: 100%;          /* Ocupa 100% do espaço do item do carrossel */
-    height: auto;        /* Mantém a proporção da imagem */
-    max-height: 950px;   /* Ajuste a altura máxima conforme necessário */
-    object-fit: cover;   /* Corta a imagem para preencher o espaço sem distorção */
-  }
-
-  .carousel-control-prev, .carousel-control-next {
-    width: 10%; /* Aumenta a largura dos botões */
+    width: 100%;
+    height: auto;
+    max-height: 950px;
+    object-fit: cover;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo */
-    border-radius: 50%; /* Esquinas arredondadas */
-    width: 50px; /* Largura do ícone */
-    height: 50px; /* Altura do ícone */
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
 }
 
-.carousel-control-prev:hover, .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo ao passar o mouse */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
 }
 
-  
+.carousel-control-prev:hover, 
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* Títulos */
-h1, h2, h3{
-    color: yellow;
-    margin-bottom: 20px;
+h1, h2, h3 {
+    color: var(--highlight-color);
+    margin-bottom: 1rem; /* Usando rem */
 }
 
-.social{
-    color: #13df00;
-}
 /* Ícones das Redes Sociais */
 .social-icons a {
     margin-right: 32px;
-    color: yellow;
+    color: var(--social-icon-color);
     transition: transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-    color: #13df00; /* Azul mais escuro ao passar o mouse */
+    transform: scale(1.1);
+    color: var(--hover-color);
 }
 
-.secao02{
+.secao02 {
     color: #0056b3;
 }
-.contato, .sobre, .passeio{
-    background-color: #1a3c73;
-    color: #ffffff;
-}
+
 /* Rodapé */
 footer {
-    background-color: #1a3c73;
+    background-color: var(--main-bg-color);
     padding: 20px 0;
     border-top: 1px solid #ddd;
 }
@@ -104,19 +110,17 @@ footer {
 footer p {
     margin: 0;
     color: #fdfdfd;
- }
-
-
+}
 
 /* Estilo responsivo */
 @media (max-width: 768px) {
     .hero {
-        height: 50vh; /* Ajusta a altura para telas menores */
+        height: 50vh;
     }
 }
 
 @media (max-width: 576px) {
     .hero {
-        height: 40vh; /* Ajusta a altura ainda mais para dispositivos pequenos */
+        height: 40vh;
     }
 }
