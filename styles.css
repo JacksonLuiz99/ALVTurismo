@@ -60,32 +60,25 @@ body {
     object-fit: cover;
 }
 
-.carousel-control-prev, 
-.carousel-control-next {
-    width: 10%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-}
 
-.carousel-control-prev-icon, 
+.carousel-control-prev-icon,
 .carousel-control-next-icon {
-    width: 50px;
-    height: 50px;
-}
-
-.carousel-control-prev:hover, 
-.carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100px;
+    height: 100px;
 }
 
 /* Títulos */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--highlight-color);
-    margin-bottom: 1rem; /* Usando rem */
+    margin-bottom: 1rem;
+    /* Usando rem */
 }
 
 /* Ícones das Redes Sociais */
 .social-icons a {
+    text-align: center;
     margin-right: 32px;
     color: var(--social-icon-color);
     transition: transform 0.3s ease;
@@ -110,6 +103,10 @@ footer {
 footer p {
     margin: 0;
     color: #fdfdfd;
+}
+
+#dev {
+    color: yellow;
 }
 
 /* Estilo responsivo */
