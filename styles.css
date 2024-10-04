@@ -45,7 +45,7 @@ body {
 }
 .carousel-item img {
     width: 100%;          /* Ocupa 100% do espaço do item do carrossel */
-    height: 950px;        /* Mantém a proporção da imagem */
+    height: auto;        /* Mantém a proporção da imagem */
     max-height: 950px;   /* Ajuste a altura máxima conforme necessário */
     object-fit: cover;   /* Corta a imagem para preencher o espaço sem distorção */
   }
