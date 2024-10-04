@@ -49,6 +49,22 @@ body {
     max-height: 950px;   /* Ajuste a altura máxima conforme necessário */
     object-fit: cover;   /* Corta a imagem para preencher o espaço sem distorção */
   }
+
+  .carousel-control-prev, .carousel-control-next {
+    width: 10%; /* Aumenta a largura dos botões */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo */
+    border-radius: 50%; /* Esquinas arredondadas */
+    width: 50px; /* Largura do ícone */
+    height: 50px; /* Altura do ícone */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo ao passar o mouse */
+}
+
   
 /* Títulos */
 h1, h2, h3{
@@ -68,7 +84,7 @@ h1, h2, h3{
 
 .social-icons a:hover {
     transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-    color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    color: #13df00; /* Azul mais escuro ao passar o mouse */
 }
 
 .secao02{
@@ -90,12 +106,7 @@ footer p {
     color: #fdfdfd;
  }
 
-div{
-    border: #13df00 1px solid;
-}
-section{
-    border: solid 1px #a10303;
-}
+
 
 /* Estilo responsivo */
 @media (max-width: 768px) {
