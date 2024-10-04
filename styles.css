@@ -71,9 +71,16 @@ body {
 h1,
 h2,
 h3 {
+    font-size: 50px;
     color: var(--highlight-color);
     margin-bottom: 1rem;
+    margin-top: 0px;
     /* Usando rem */
+}
+
+p{
+    font-size: 20px;
+    font-family: 'Lucida Sans', sans-serif;
 }
 
 /* Ícones das Redes Sociais */
@@ -108,6 +115,7 @@ footer p {
 #dev {
     color: yellow;
 }
+
 
 /* Estilo responsivo */
 @media (max-width: 768px) {
