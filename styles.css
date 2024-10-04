@@ -2,8 +2,8 @@
     --main-bg-color: #1a3c73;
     --text-color: #ffffff;
     --highlight-color: yellow;
-    --social-icon-color: rebeccapurple;
-    --hover-color: #13df00;
+    --social-icon-color: #32d951;
+    --hover-color: #cc4c0d;
 }
 
 /* Estilos Gerais */
@@ -105,6 +105,10 @@ footer {
     background-color: var(--main-bg-color);
     padding: 20px 0;
     border-top: 1px solid #ddd;
+}
+
+.cadastur{
+    padding-bottom: 16px;
 }
 
 footer p {
