@@ -1,10 +1,10 @@
 /* Estilos Gerais */
 body {
-    font-family: 'Arial', sans-serif;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #e1eddf;
+    background-color: #dff2f1;
  }
 
 /* Hero Section */
@@ -50,10 +50,9 @@ body {
     object-fit: cover;   /* Corta a imagem para preencher o espaço sem distorção */
   }
   
-
 /* Títulos */
 h1, h2, h3{
-    color: #103274; /* Azul para remeter ao mar */
+    color: yellow;
     margin-bottom: 20px;
 }
 
@@ -72,6 +71,13 @@ h1, h2, h3{
     color: #0056b3; /* Azul mais escuro ao passar o mouse */
 }
 
+.secao02{
+    color: #0056b3;
+}
+.contato, .sobre{
+    background-color: #1a3c73;
+    color: #ffffff;
+}
 /* Rodapé */
 footer {
     background-color: #1a3c73;
