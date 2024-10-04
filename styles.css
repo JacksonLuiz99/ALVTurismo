@@ -10,16 +10,17 @@ body {
 /* Hero Section */
 .hero {
     background-image: url('img/alvLogoBg.png');
-    height: 60vh;
+    height: 60vh; /* Você pode considerar usar uma unidade percentual ou 'auto' */
+    min-height: 300px; /* Adiciona uma altura mínima para telas menores */
     background-size: cover;
     background-position: center;
     color: #f0f8ff;
-    display: flex;
+    display: flex; /* Mudando de inline-block para flex */
     justify-content: center;
     align-items: center;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
- }
+}
 
 .logoAlv{
     border-radius: 8%;
@@ -86,9 +87,15 @@ section{
     border: solid 1px #a10303;
 }
 
-/* Responsividade */
+/* Estilo responsivo */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem; /* Ajusta o tamanho do título em telas menores */
+    .hero {
+        height: 50vh; /* Ajusta a altura para telas menores */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 40vh; /* Ajusta a altura ainda mais para dispositivos pequenos */
     }
 }
