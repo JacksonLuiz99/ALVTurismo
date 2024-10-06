@@ -47,7 +47,7 @@ body {
     background-color: var(--main-bg-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
-    
+
 }
 
 #navbarNav {
@@ -78,7 +78,7 @@ h3 {
     /* Usando rem */
 }
 
-p{
+p {
     font-size: 20px;
     font-family: 'Lucida Sans', sans-serif;
 }
@@ -107,7 +107,7 @@ footer {
     border-top: 1px solid #ddd;
 }
 
-.cadastur{
+.cadastur {
     padding-bottom: 16px;
 }
 
