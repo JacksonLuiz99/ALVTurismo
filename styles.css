@@ -120,6 +120,16 @@ footer p {
     color: yellow;
 }
 
+/* css/styles.css */
+.whatsapp-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 1000;
+    width: 200px; /* Defina o tamanho desejado */
+    height: 200px; /* Defina o tamanho desejado */
+  }
+    
 
 /* Estilo responsivo */
 @media (max-width: 768px) {
