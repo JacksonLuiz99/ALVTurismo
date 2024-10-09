@@ -6,9 +6,10 @@
     --hover-color: #cc4c0d;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
+
 /* Estilos Gerais */
 body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -123,7 +124,7 @@ footer p {
     color: yellow;
 }
 
-.whatsapp-button{
+.whatsapp-button {
     position: fixed;
     right: 15px;
     bottom: 15px;
@@ -131,7 +132,7 @@ footer p {
     -webkit-text-stroke: 1px #0f4d19;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-    
+
 
 /* Estilo responsivo */
 @media (max-width: 768px) {
