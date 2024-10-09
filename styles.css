@@ -6,9 +6,12 @@
     --hover-color: #cc4c0d;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 /* Estilos Gerais */
 body {
-    font-family: 'Lucida Sans', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -124,6 +127,9 @@ footer p {
     position: fixed;
     right: 15px;
     bottom: 15px;
+    color: #25d366;
+    -webkit-text-stroke: 1px #0f4d19;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
     
 
