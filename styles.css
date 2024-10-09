@@ -87,6 +87,12 @@ p {
     font-family: 'Lucida Sans', sans-serif;
 }
 
+.bandeiras{
+    width: 100%;
+   height: 200px;
+}
+
+
 /* Ícones das Redes Sociais */
 .social-icons a {
     text-align: center;
