@@ -33,6 +33,11 @@ body {
     text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
+.navbar-toggler{
+ 
+    background-color: var(--text-color);
+    border: var(--text-color);
+}
 
 .logoAlv {
     border-radius: 8%;
