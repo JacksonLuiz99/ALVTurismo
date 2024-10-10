@@ -97,8 +97,14 @@ body {
 
 }
 
+#about{
+    padding-bottom: 5px;
+}
+
 #transfer {
     margin-top: -4%;
+    padding-bottom: 5px;
+
 }
 
 #navbarNav {
