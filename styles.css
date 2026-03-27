@@ -1,48 +1,48 @@
 /* Custom Styles for ALV Turismo */
 
 :root {
-    --ocean-deep: #0F172A;
-    --ocean-blue: #0EA5E9;
-    --sun-gold: #FACC15;
+  --ocean-deep: #0f172a;
+  --ocean-blue: #0ea5e9;
+  --sun-gold: #facc15;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom Text Effects */
 .stroke-text {
-    -webkit-text-stroke: 1px var(--ocean-blue);
-    color: transparent;
+  -webkit-text-stroke: 1px var(--ocean-blue);
+  color: transparent;
 }
 
 @media (min-width: 1024px) {
-    .stroke-text {
-        -webkit-text-stroke: 2px var(--ocean-blue);
-    }
+  .stroke-text {
+    -webkit-text-stroke: 2px var(--ocean-blue);
+  }
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 10px;
+  background: #cbd5e1;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--ocean-blue);
+  background: var(--ocean-blue);
 }
 
 /* Animations are handled via Tailwind Config in index.html */
