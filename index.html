@@ -1,428 +1,464 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ALV Turismo - Transfer Passeios em Porto de Galinhas e Maragogi.">
-
-    <!--Aumentar a visibilidade do site-->
-    <meta name="keywords"
-        content="transfer Porto de Galinhas, passeios Maragogi, turismo Pernambuco, agência de turismo, passeios em Porto de Galinhas, transfer para Maragogi, turismo em Maragogi, atrações em Porto de Galinhas, praias de Porto de Galinhas, passeios de barco Porto de Galinhas, mergulho em Maragogi, transporte turístico Pernambuco, excursões em Maragogi, reservas de transfer Porto de Galinhas, turismo sustentável em Pernambuco, roteiro turístico Porto de Galinhas, cultura local Maragogi, passeios familiares Porto de Galinhas, transfer privativo Porto de Galinhas, transfer compartilhado Maragogi, guias turísticos em Porto de Galinhas, atividades aquáticas Maragogi, tours em grupo Porto de Galinhas, experiências em Maragogi, turismo de aventura Porto de Galinhas, passeios românticos Maragogi">
-
+    <meta name="keywords" content="transfer Porto de Galinhas, passeios Maragogi, turismo Pernambuco, agência de turismo, passeios em Porto de Galinhas, transfer para Maragogi, turismo em Maragogi, praias de Porto de Galinhas, passeios de barco Porto de Galinhas, mergulho em Maragogi, transporte turístico Pernambuco, excursões em Maragogi, reservas de transfer Porto de Galinhas, turismo sustentável em Pernambuco, roteiro turístico Porto de Galinhas, cultura local Maragogi, passeios familiares Porto de Galinhas, transfer privativo Porto de Galinhas, transfer compartilhado Maragogi, guias turísticos em Porto de Galinhas, atividades aquáticas Maragogi, tours em grupo Porto de Galinhas, experiências em Maragogi, turismo de aventura Porto de Galinhas, passeios românticos Maragogi">
 
     <title>ALV Turismo - Maragogi e Porto de Galinhas</title>
 
-    <!--Five icons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <!-- Google Fonts: Outfit and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!--Bootstraop icons-->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ocean-deep': '#0F172A',
+                        'ocean-blue': '#0EA5E9',
+                        'sun-gold': '#FACC15',
+                        'tropical-cyan': '#22D3EE',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
-    <!--Bootstraop 5-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link href="styles.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
 
-    <header class="hero text-center d-flex justify-content-center align-items-center">
+    <!-- HERO SECTION -->
+    <header class="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-ocean-deep/70 via-ocean-deep/40 to-slate-50 z-10"></div>
+            <img src="img/logo/back.PNG" alt="ALV Turismo Background" class="w-full h-full object-cover transform scale-105">
+        </div>
 
+        <!-- Hero Content -->
+        <div class="container mx-auto px-4 relative z-20 text-center animate-fade-in">
+            <div class="mb-8">
+                <img src="img/logo/logoMine.png" alt="ALV Turismo Logo" class="mx-auto w-40 md:w-56 drop-shadow-2xl rounded-3xl border-4 border-white/10">
+            </div>
+            <h1 class="font-outfit text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight drop-shadow-2xl">
+                ALV <span class="text-sun-gold">Turismo</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-50 font-medium mb-10 max-w-2xl mx-auto drop-shadow-md leading-relaxed">
+                Experiências exclusivas e transfers premium pelo litoral de Pernambuco e Alagoas.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#transfer" class="group bg-ocean-blue hover:bg-ocean-blue/90 text-white px-10 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-xl shadow-ocean-blue/30 flex items-center gap-2">
+                    Nossa Frota <i class="bi bi-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5581985387570&text=Olá,%20vi%20o%20site%20e%20quero%20um%20orçamento" target="_blank" class="bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-white/20 text-white px-10 py-4 rounded-2xl font-bold transition-all transform hover:scale-105">
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container menu">
-            <a class="navbar-brand" href="#"><img src="img/logo/logoMine.png" alt="Ailson Tur" width="150"
-                    class="logoAlv"></a>
-            <a href="https://www.instagram.com/ailsontour/" target="_blank"> <i class="bi bi-instagram"
-                    style="font-size: 50px; margin-left: 15px; color: #f31885;"></i></a>
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6 font-outfit">
+        <div class="container mx-auto px-4">
+            <div id="nav-container" class="bg-white/70 backdrop-blur-2xl border border-white/20 rounded-3xl px-6 py-3 flex justify-between items-center shadow-lg shadow-ocean-deep/5 transition-all">
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="img/logo/logoMine.png" alt="Logo" class="w-10 h-10 rounded-xl object-cover shadow-sm group-hover:rotate-6 transition-transform">
+                    <span class="font-extrabold text-xl text-ocean-deep tracking-tight">ALV <span class="text-ocean-blue">Turismo</span></span>
+                </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link menu" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link menu" href="#transfer">Transfer</a></li>
-                    <li class="nav-item"><a class="nav-link menu" href="#passeios">Passeios</a></li>
-                    <li class="nav-item"><a class="nav-link menu" href="#location">Localização</a></li>
-                    <li class="nav-item"><a class="nav-link menu" href="#contact">Contato</a></li>
-                </ul>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="font-bold text-sm text-slate-600 hover:text-ocean-blue transition-colors uppercase tracking-wider">Sobre</a>
+                    <a href="#transfer" class="font-bold text-sm text-slate-600 hover:text-ocean-blue transition-colors uppercase tracking-wider">Transfer</a>
+                    <a href="#passeios" class="font-bold text-sm text-slate-600 hover:text-ocean-blue transition-colors uppercase tracking-wider">Passeios</a>
+                    <a href="#location" class="font-bold text-sm text-slate-600 hover:text-ocean-blue transition-colors uppercase tracking-wider">Localização</a>
+                    <div class="h-6 w-px bg-slate-200"></div>
+                    <a href="https://www.instagram.com/ailsontour/" target="_blank" class="text-pink-600 text-2xl hover:scale-110 transition-transform flex items-center">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#contact" class="bg-ocean-deep text-white px-6 py-2.5 rounded-2xl font-bold text-sm hover:shadow-lg hover:shadow-ocean-deep/20 transition-all active:scale-95">
+                        RESERVAR
+                    </a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button id="menu-toggle" class="md:hidden text-2xl text-ocean-deep p-2 focus:outline-none">
+                    <i class="bi bi-list"></i>
+                </button>
             </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-4 right-4 mt-2 bg-white/95 backdrop-blur-3xl rounded-3xl border border-slate-100 p-6 space-y-4 shadow-2xl">
+            <a href="#about" class="block font-bold text-slate-700 py-3 border-b border-slate-100 mobile-link">Sobre</a>
+            <a href="#transfer" class="block font-bold text-slate-700 py-3 border-b border-slate-100 mobile-link">Transfer</a>
+            <a href="#passeios" class="block font-bold text-slate-700 py-3 border-b border-slate-100 mobile-link">Passeios</a>
+            <a href="#location" class="block font-bold text-slate-700 py-3 border-b border-slate-100 mobile-link">Localização</a>
+            <a href="https://api.whatsapp.com/send?phone=5581985387570" class="block font-bold text-ocean-blue py-3 mobile-link">Contato WhatsApp</a>
         </div>
     </nav>
 
-    <section id="about" class="section sobre text-center">
-        <div class="container">
-            <h1>ALV Turismo: Sua Porta de Entrada Para o Litoral Nordestino</h1>
-            <p>Fundada em 2013, a ALV Turismo se destaca como a sua porta de entrada para as deslumbrantes belezas do
-                litoral nordestino. Oferecemos serviços de turismo de alta qualidade, sempre com um toque de
-                exclusividade que faz toda a diferença na sua experiência.</p>
-        </div>
-
-    </section>
-
-    <section id="transfer" class="section ">
-        <div class="container text-center section">
-            <h1 class="secao02">Transfer Privado e Executivo</h1>
-            <p>Especializada em transfer executivo e transfer privados, a ALV Turismo garante um elevado padrão de
-                conforto e segurança, desde o momento do seu desembarque até os mais deslumbrantes destinos, como as
-                paradisíacas praias de Porto de Galinhas e Maragogi. Todos os nossos carros são regularizados para fazer
-                transfer, assegurando uma viagem tranquila e agradável. Nossa missão é proporcionar uma experiência
-                única e inesquecível em cada etapa da sua viagem.</p>
-            <!--carrosel transfer-->
-            <div id="carouselExampleAutoplaying2" class="carousel slide container" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/trasnfer/spinbagagito.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/trasnfer/corolla.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/trasnfer/versa.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/trasnfer/spin.png" class="d-block w-100" alt="">
-                    </div>
-                </div>
-
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying2"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying2"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section id="passeios" class="section passeio">
-        <div class="container text-center">
-            <h1>Passeio De Quadriciclo</h1>
-
-            <p>Explore as belezas naturais de forma emocionante com os passeios de quadriciclo da ALV Turismo! Sinta a
-                adrenalina enquanto percorre trilhas deslumbrantes em meio à vegetação exuberante e paisagens de tirar o
-                fôlego. Nossos guias experientes garantem uma experiência segura e cheia de diversão, adaptada para
-                todos os níveis de habilidade.</p>
-            <p>Durante o passeio, você terá a oportunidade de descobrir cantinhos escondidos da região e se conectando
-                com a natureza de maneira única. Seja uma aventura em grupo ou um passeio romântico, a ALV Turismo
-                oferece uma experiência inesquecível. Venha viver essa emoção e leve para casa memórias incríveis!</p>
-
-            <!--carrosel Passeio Quadriciclo-->
-            <div id="carouselExampleAutoplaying3" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/passeioQuadriciclo/quadriciclo4pessoas.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioQuadriciclo/quadricicloEmEquipe.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioQuadriciclo/mocaDeQuadriciclo.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioQuadriciclo/mocaNoQuadricicloempinado.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioQuadriciclo/casaNoQuadriciclo.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioQuadriciclo/grupoDeJovensNoquadriciclo.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioQuadriciclo/mocaEmpinadowuadriciclo2.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioQuadriciclo/casalFozDoRioUna.png" class="d-block w-100" alt="">
-                    </div>
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying3"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying3"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container text-center">
-            <h1 class="secao02">Piscina Natural de Porto de Galinhas</h1>
-
-            <p>As piscinas naturais de Porto de Galinhas são um verdadeiro paraíso! Localizadas em uma das mais famosas
-                praias do Brasil, essas formações de corais criam lagunas de água cristalina que se revelam durante a
-                maré baixa. Ideal para um dia de lazer, as piscinas são perfeitas para nadar, observar a rica vida
-                marinha, como peixes coloridos e tartarugas. </p>
-            <p>Os passeios para as piscinas geralmente partem de jangadas, oferecendo uma experiência única de navegação
-                pelas águas calmas. Com a beleza das falésias ao fundo e o céu azul refletido nas águas, é um cenário de
-                sonho que encanta visitantes de todas as idades. Além disso, a estrutura ao redor, com barracas e
-                restaurantes, garante conforto e diversão após um dia de exploração. Venha viver essa experiência
-                inesquecível em Porto de Galinhas!
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-32 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl -mr-32 -mt-32 opacity-50"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-cyan-50 rounded-full blur-3xl -ml-32 -mb-32 opacity-50"></div>
+        
+        <div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 mb-8 text-[10px] font-black tracking-[0.3em] text-ocean-blue uppercase bg-blue-50 rounded-full border border-blue-100">
+                Excelência desde 2013
+            </span>
+            <h2 class="font-outfit text-4xl md:text-6xl font-black text-ocean-deep mb-10 leading-[1.1] tracking-tight">
+                Sua Porta de Entrada Para o Litoral Nordestino
+            </h2>
+            <p class="text-xl text-slate-600 leading-relaxed font-medium">
+                A ALV Turismo se destaca como especialista nas deslumbrantes belezas do litoral nordestino. Oferecemos serviços de turismo de alta qualidade com um toque de exclusividade e segurança, garantindo que cada momento da sua viagem seja inesquecível.
             </p>
+        </div>
+    </section>
 
-            <!--carrosel Piscina natural de Porto de galinhas-->
-            <div id="carouselExampleAutoplaying4" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/piscinaNaturalPortoDeGalinhas/mocaNaJangada.png" class="d-block w-100" alt="">
+    <!-- TRANSFER SECTION -->
+    <section id="transfer" class="py-32 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="font-outfit text-4xl md:text-6xl font-black text-ocean-deep mb-6 tracking-tight">
+                        Frota <span class="text-ocean-blue italic">Premium</span>
+                    </h2>
+                    <p class="text-xl text-slate-600 font-medium leading-relaxed">
+                        Veículos modernos, higienizados e regularizados para garantir o máximo conforto em seu transfer privado ou executivo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Veículos Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Vehicle Card 1 -->
+                <div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200/50 hover:shadow-ocean-blue/10 transition-all duration-500 border border-white transform hover:-translate-y-4">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="img/trasnfer/spinbagagito.png" alt="Chevrolet Spin" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-6 left-6 bg-ocean-blue text-white text-[10px] uppercase font-black tracking-widest px-4 py-1.5 rounded-full backdrop-blur-md">SUV 7 Lugares</div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/piscinaNaturalPortoDeGalinhas/mocaComPeixes.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/piscinaNaturalPortoDeGalinhas/casalMaoPraCima.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/piscinaNaturalPortoDeGalinhas/mocaComPeixes02.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/piscinaNaturalPortoDeGalinhas/casalComPeixes.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/piscinaNaturalPortoDeGalinhas/homenComPeixes.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/piscinaNaturalPortoDeGalinhas/casalComPeixes02.png" class="d-block w-100" alt="">
+                    <div class="p-8">
+                        <h3 class="font-outfit font-black text-2xl text-ocean-deep mb-3 uppercase tracking-tight">Chevrolet Spin</h3>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">Conforto para toda a família e amplo espaço para suas bagagens.</p>
+                        <div class="flex items-center gap-5 text-ocean-blue/40">
+                            <i class="bi bi-snow2 text-2xl"></i>
+                            <i class="bi bi-people-fill text-2xl"></i>
+                            <i class="bi bi-briefcase-fill text-2xl"></i>
+                        </div>
                     </div>
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying4"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying4"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <!-- Vehicle Card 2 -->
+                <div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200/50 hover:shadow-ocean-blue/10 transition-all duration-500 border border-white transform hover:-translate-y-4">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="img/trasnfer/corolla.png" alt="Toyota Corolla" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-6 left-6 bg-ocean-deep text-white text-[10px] uppercase font-black tracking-widest px-4 py-1.5 rounded-full backdrop-blur-md">Premium</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-outfit font-black text-2xl text-ocean-deep mb-3 uppercase tracking-tight">Toyota Corolla</h3>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">O padrão ouro do transporte executivo para suas viagens de luxo.</p>
+                        <div class="flex items-center gap-5 text-ocean-blue/40">
+                            <i class="bi bi-snow2 text-2xl"></i>
+                            <i class="bi bi-gem text-2xl"></i>
+                            <i class="bi bi-shield-lock-fill text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 3 -->
+                <div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200/50 hover:shadow-ocean-blue/10 transition-all duration-500 border border-white transform hover:-translate-y-4">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="img/trasnfer/versa.png" alt="Nissan Versa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-6 left-6 bg-ocean-blue text-white text-[10px] uppercase font-black tracking-widest px-4 py-1.5 rounded-full backdrop-blur-md">Executivo</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-outfit font-black text-2xl text-ocean-deep mb-3 uppercase tracking-tight">Nissan Versa</h3>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">Espaço interno excepcional e economia com muito conforto.</p>
+                        <div class="flex items-center gap-5 text-ocean-blue/40">
+                            <i class="bi bi-snow2 text-2xl"></i>
+                            <i class="bi bi-aspect-ratio text-2xl"></i>
+                            <i class="bi bi-check-lg text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 4 -->
+                <div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200/50 hover:shadow-ocean-blue/10 transition-all duration-500 border border-white transform hover:-translate-y-4">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="img/trasnfer/spin.png" alt="Chevrolet Spin 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-6 left-6 bg-ocean-blue text-white text-[10px] uppercase font-black tracking-widest px-4 py-1.5 rounded-full backdrop-blur-md">SUV</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-outfit font-black text-2xl text-ocean-deep mb-3 uppercase tracking-tight">Spin Flex</h3>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">Versatilidade e espaço para todos os destinos da região.</p>
+                        <div class="flex items-center gap-5 text-ocean-blue/40">
+                            <i class="bi bi-snow2 text-2xl"></i>
+                            <i class="bi bi-people-fill text-2xl"></i>
+                            <i class="bi bi-truck-flatbed text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section passeio">
-        <div class="container text-center">
-            <h1>Passeio De Lancha em Maragogi</h1>
+    <!-- EXPERIENCES / PASSEIOS SECTION -->
+    <section id="passeios" class="py-32 bg-white overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-24 relative">
+                <div class="absolute top-1/2 left-0 w-full h-px bg-slate-100 -z-10"></div>
+                <span class="bg-white px-8 text-ocean-blue font-black uppercase tracking-widest text-xs mb-4 inline-block">As Melhores Rotas</span>
+                <h2 class="font-outfit text-5xl md:text-8xl font-black text-ocean-deep tracking-tighter uppercase leading-none">
+                    Passeios <span class="text-ocean-blue stroke-text">Únicos</span>
+                </h2>
+            </div>
 
-            <p>O passeio de lancha em Maragogi é uma experiência imperdível para quem deseja explorar as belezas
-                naturais da região. Navegue pelas águas cristalinas e conheça praias paradisíacas, onde a vida marinha
-                encanta a todos.</p>
-            <p>Com guias experientes e lanchas confortáveis, você terá paradas para banho, garantindo momentos de
-                diversão e relaxamento. Sinta a brisa do mar enquanto aprecia a tranquilidade das águas, criando
-                memórias inesquecíveis em um dos destinos mais lindos do Brasil!</p>
-
-            <!--carrosel Passeio De Lancha em Maragogi-->
-            <div id="carouselExampleAutoplaying5" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/passeioDeLancha/lancha.png" class="d-block w-100" alt="">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Tour Card 1 -->
+                <div class="group relative rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl">
+                    <img src="img/passeioQuadriciclo/quadriciclo4pessoas.png" alt="Quadriciclo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ocean-deep via-ocean-deep/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-12 flex flex-col justify-end transform transition-all duration-500 group-hover:translate-y-0 translate-y-6">
+                        <div class="bg-sun-gold text-ocean-deep w-fit px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-4">Aventura</div>
+                        <h3 class="font-outfit text-3xl font-black text-white mb-4 leading-tight uppercase tracking-tight">Quadriciclo</h3>
+                        <p class="text-blue-100/80 text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-700 mb-8 line-clamp-3">
+                            Explore trilhas paradisíacas com adrenalina e segurança total.
+                        </p>
+                        <a href="https://api.whatsapp.com/send?phone=5581985387570" target="_blank" class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-ocean-deep shadow-2xl transform scale-0 group-hover:scale-100 transition-all duration-500 hover:bg-ocean-blue hover:text-white">
+                            <i class="bi bi-whatsapp text-2xl"></i>
+                        </a>
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioDeLancha/lanchaPasseio.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioDeLancha/Caminho de Moisés.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioDeLancha/casal01.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioDeLancha/familia1.jpeg" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioDeLancha/familia13x10.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioDeLancha/barco.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioDeLancha/Maragogi02.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioDeLancha/Caminho d Moisés.png" class="d-block w-100" alt="">
-                    </div>
-
-
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying5"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying5"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <!-- Tour Card 2 -->
+                <div class="group relative rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl">
+                    <img src="img/piscinaNaturalPortoDeGalinhas/mocaNaJangada.png" alt="Piscinas Naturais" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ocean-deep via-ocean-deep/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-12 flex flex-col justify-end transform transition-all duration-500 group-hover:translate-y-0 translate-y-6">
+                        <div class="bg-tropical-cyan text-ocean-deep w-fit px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-4">Natureza</div>
+                        <h3 class="font-outfit text-3xl font-black text-white mb-4 leading-tight uppercase tracking-tight">Piscinas Porto</h3>
+                        <p class="text-blue-100/80 text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-700 mb-8 line-clamp-3">
+                            O clássico inesquecível em meio aos corais e águas cristalinas.
+                        </p>
+                        <a href="https://api.whatsapp.com/send?phone=5581985387570" target="_blank" class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-ocean-deep shadow-2xl transform scale-0 group-hover:scale-100 transition-all duration-500 hover:bg-ocean-blue hover:text-white">
+                            <i class="bi bi-whatsapp text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tour Card 3 -->
+                <div class="group relative rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl">
+                    <img src="img/passeioDeLancha/lancha.png" alt="Lancha em Maragogi" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ocean-deep via-ocean-deep/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-12 flex flex-col justify-end transform transition-all duration-500 group-hover:translate-y-0 translate-y-6">
+                        <div class="bg-ocean-blue text-white w-fit px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-4">Experiência</div>
+                        <h3 class="font-outfit text-3xl font-black text-white mb-4 leading-tight uppercase tracking-tight">Lancha Maragogi</h3>
+                        <p class="text-blue-100/80 text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-700 mb-8 line-clamp-3">
+                            Sofisticação e beleza incomparável nas galés de Alagoas.
+                        </p>
+                        <a href="https://api.whatsapp.com/send?phone=5581985387570" target="_blank" class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-ocean-deep shadow-2xl transform scale-0 group-hover:scale-100 transition-all duration-500 hover:bg-ocean-blue hover:text-white">
+                            <i class="bi bi-whatsapp text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-24 text-center">
+                <a href="https://api.whatsapp.com/send?phone=5581985387570" target="_blank" class="inline-flex items-center gap-4 bg-green-500 hover:bg-green-600 text-white px-12 py-6 rounded-[2.5rem] font-black text-xl shadow-2xl shadow-green-500/40 transition-all hover:scale-105 active:scale-95 group">
+                    <i class="bi bi-whatsapp text-2xl animate-pulse"></i> Reservar Passeio Especial
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container text-center">
-            <h1 class="secao02">O City Tour em Recife e Olinda</h1>
-
-            <p>O City Tour em Recife e Olinda é uma oportunidade imperdível para descobrir a rica cultura e história
-                dessas cidades encantadoras. Comece sua jornada explorando Recife, com suas belíssimas pontes, rios e o
-                vibrante Mercado de São José. Não deixe de visitar o Instituto Ricardo Brennand e o Museu do Frevo, que
-                oferecem um olhar fascinante sobre a arte e a história pernambucanas.</p>
-            <p>Em seguida, siga para Olinda, um Patrimônio Mundial da UNESCO, famosa por suas ladeiras coloridas e
-                igrejas históricas. Desfrute de uma vista panorâmica do Alto da Sé e mergulhe na atmosfera artística do
-                local, repleta de ateliês e galerias. O tour proporciona uma imersão na cultura local, com paradas para
-                degustar delícias da culinária regional, tornando a experiência ainda mais memorável.</p>
-
-            <!--carrosel O City Tour em Recife e Olinda-->
-            <div id="carouselExampleAutoplaying6" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/cityTourEmRecifeEOlinda/olinda.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/cityTourEmRecifeEOlinda/recife13x10.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/cityTourEmRecifeEOlinda/igreja.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/cityTourEmRecifeEOlinda/igreja02.png" class="d-block w-100" alt="">
-                    </div>
-
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying6"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying6"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section class="section passeio">
-        <div class="container text-center">
-            <h1>Passeio Ponta a Ponta Em Porto de Galinhas</h1>
-
-            <p>O Passeio de Buggy Ponta a Ponta é o clássico passeio que leva você a conhecer as cinco praias que
-                compõem o destino Porto de Galinhas: Maracaípe, Pontal de Maracaípe, Cupe, Pontal do Cupe e Muro Alto.
-                Cada uma dessas praias possui características únicas, oferecendo paisagens deslumbrantes e experiências
-                diversificadas.</p>
-            <p>Durante a aventura, você explorará as belezas naturais de norte a sul, parando em locais paradisíacos
-                para nadar e relaxar. O passeio é guiado por profissionais experientes, garantindo uma imersão completa
-                na cultura local e na rica biodiversidade da região. Uma forma emocionante e inesquecível de descobrir
-                tudo o que Porto de Galinhas tem a oferecer!</p>
-
-            <!--carrosel Passeio ponta a ponta em porto de galinhas-->
-            <div id="carouselExampleAutoplaying8" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/passeioPontaAPontaEmPortoDeGalinhas/bug.png" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/passeioPontaAPontaEmPortoDeGalinhas/aeroCoqueiros.png" class="d-block w-100"
-                            alt="">
-
-
-                    </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying8"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying8"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-    </section>
-
-
-    <section id="3" class="section">
-        <div id="contact" class="container text-center">
-            <div class="row">
-                <div id="location" class="col-md-6">
-                    <h3 class="secao02">Localização</h3>
+    <!-- LOCATION & CONTACT -->
+    <section id="location" class="py-32 bg-slate-100 relative">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-stretch">
+                <!-- Map -->
+                <div class="bg-white p-6 rounded-[3.5rem] shadow-2xl border border-white overflow-hidden min-h-[550px]">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2348.371293055474!2d-34.923114523921186!3d-8.154904687071365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aae1c4b5dad121%3A0x62cb82830abba23e!2sR.%20Jos%C3%A9%20Bonif%C3%A1cio%20-%20Guararapes%2C%20Jaboat%C3%A3o%20dos%20Guararapes%20-%20PE%2C%2054325-061!5e0!3m2!1spt-BR!2sbr!4v1727661614028!5m2!1spt-BR!2sbr&z=15"
-                        width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"></iframe> <br>
-                    <p>R. José Bonifácio - Muribeca dos Guararapes, Jaboatão dos Guararapes - PE, 54325-061, Brasil</p>
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-[2.5rem]"></iframe>
                 </div>
-                <div class="col-md-6">
-                    <h3 class="secao02">Aceitamos As Principais Bandeiras De Cartões!</h3>
-                    <img class="bandeiras" src="img/logo/bandeirasCartões.png">
-                    <p>Faça agora mesmo um orçamento, estamos aqui para ajudar! Se você tiver alguma dúvida ou quiser
-                        mais informações sobre nossos serviços,
-                        entre em contato Conosco através de nosso <a
-                            href="https://api.whatsapp.com/send?phone=5581985387570&text=Olá,%20vim%20através%20do%20seu%20Site"
-                            target="_blank">WhatsApp</a> e visite nosso <a href="https://www.instagram.com/ailsontour/"
-                            target="_blank"> Instagram</a>.</p>
-                    <!--<div class="social-icons">
-                       <p>Fale conosco agora mesmo:
-                            <a href="https://api.whatsapp.com/send?phone=5581985387570&text=Olá,%20vim%20através%20do%20seu%20Site"
-                                target="_blank">
-                                <i class="bi bi-whatsapp" style="font-size: 50px; margin-right: 15px;"></i>
-                            </a>
-                        </p>
-                          
-                        <p>Visite o nosso Instagram:
-                            <a href="https://www.instagram.com/ailsontour/" target="_blank">
-                                <i class="bi bi-instagram"
-                                    style="font-size: 50px; margin-right: 15px; color: #f31885;"></i>
-                            </a>
-                        </p>-->
 
+                <!-- Contact -->
+                <div id="contact" class="flex flex-col justify-center py-10 lg:pl-10">
+                    <span class="text-ocean-blue font-black uppercase tracking-widest text-xs mb-6 block">Atendimento 24h</span>
+                    <h2 class="font-outfit text-5xl md:text-7xl font-black text-ocean-deep mb-12 tracking-tighter leading-[1] uppercase">
+                        Pronto para o <br><span class="text-ocean-blue stroke-text">Paraíso?</span>
+                    </h2>
+                    
+                    <div class="space-y-12">
+                        <div class="flex items-start gap-8 group">
+                            <div class="w-16 h-16 bg-white rounded-3xl flex items-center justify-center text-ocean-blue text-2xl shadow-xl shadow-slate-200 group-hover:bg-ocean-deep group-hover:text-white transition-all transform group-hover:rotate-6">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-outfit font-black text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-2">Base de Operações PE</h4>
+                                <p class="text-xl text-slate-800 font-bold leading-tight">Jaboatão dos Guararapes, Pernambuco</p>
+                                <p class="text-sm text-slate-400 mt-1">R. José Bonifácio - Guararapes</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-8 group">
+                            <div class="w-16 h-16 bg-white rounded-3xl flex items-center justify-center text-green-500 text-2xl shadow-xl shadow-slate-200 group-hover:bg-green-500 group-hover:text-white transition-all transform group-hover:-rotate-6">
+                                <i class="bi bi-credit-card-2-back"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-outfit font-black text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-2">Pagamento</h4>
+                                <p class="text-xl text-slate-800 font-bold leading-tight">Em até 12x nos cartões</p>
+                                <div class="flex gap-2 mt-4 opacity-40 hover:opacity-100 transition-opacity">
+                                    <img src="img/logo/bandeirasCartões.png" alt="Cards" class="h-6">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-12 border-t border-slate-200 flex flex-wrap gap-6">
+                            <a href="https://www.instagram.com/ailsontour/" target="_blank" class="flex items-center gap-4 bg-white text-pink-600 px-8 py-4 rounded-2xl font-black text-sm border border-slate-100 hover:shadow-xl transition-all active:scale-95">
+                                <i class="bi bi-instagram text-xl"></i> @ailsontour
+                            </a>
+                            <a href="#" class="flex items-center gap-4 bg-white text-slate-800 px-8 py-4 rounded-2xl font-black text-sm border border-slate-100 hover:shadow-xl transition-all active:scale-95">
+                                <i class="bi bi-envelope text-xl"></i> Contato via E-mail
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
+    <!-- FOOTER -->
+    <footer class="bg-ocean-deep pt-40 pb-20 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-20 mb-32">
+                <div class="text-center lg:text-left">
+                    <img src="img/logo/logoMine.png" alt="ALV Logo" class="w-24 mb-10 mx-auto lg:mx-0 rounded-3xl border-2 border-white/5">
+                    <p class="text-blue-200/40 max-w-sm text-sm font-medium leading-relaxed">
+                        Compromisso com o turismo legal e a máxima segurança para sua família.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <img src="img/logo/logoCadastur.png" alt="Cadastur" class="h-24 mb-6 drop-shadow-2xl brightness-125">
+                    <p class="font-black text-[9px] uppercase tracking-[0.4em] text-sun-gold/60">Turismo Legalizado</p>
+                    <p class="text-blue-200/30 text-[10px] mt-2 font-mono">CNPJ: 38.100.876/0001-82</p>
+                </div>
 
-    <!-- botão flutuante whatsapp -->
-    <div class="whatsapp-button">
-        <a href="https://api.whatsapp.com/send?phone=5581985387570&text=Olá,%20vim%20através%20do%20seu%20Site"
-            class="whatsapp-button" target="_blank">
-            <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="botão whatsapp">
-        </a>
-    </div>
+                <div class="text-center lg:text-right">
+                    <p class="text-blue-200/20 text-[9px] mb-6 uppercase font-black tracking-widest">Digital Experience</p>
+                    <a href="https://conectdevjackson.netlify.app/" target="_blank" class="group flex items-center justify-center lg:justify-end gap-4">
+                        <span class="font-outfit font-black text-xl text-white group-hover:text-sun-gold transition-colors">Jackson Luiz</span>
+                        <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-sun-gold group-hover:text-ocean-deep transition-all">
+                            <i class="bi bi-laptop text-xl"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
-    <footer class="text-center py-4 ">
-        <img class="cadastur" src="img/logo/logoCadastur.png" alt="Logo Cadastur">
-        <p><strong>Fazendo o turismo legal.</strong></p> <br>
-        <p><strong>CNPJ: </strong>38.100.876/0001-82</p>
-        <p>&copy; 2024 ALV Turismo | Todos os direitos reservados.</p>
-
-        <p><i class="bi bi-laptop"></i> Desenvolvido por <a id="dev" href="https://conectdevjackson.netlify.app/"
-                target="_blank">Jackson Luiz</a></p>
+            <div class="text-center">
+                <p class="text-[9px] uppercase font-bold tracking-[0.5em] text-white/10 italic">
+                    &copy; 2024 ALV Turismo | Excellence in Travel
+                </p>
+            </div>
+        </div>
     </footer>
 
+    <!-- FLOAT WHATSAPP -->
+    <a href="https://api.whatsapp.com/send?phone=5581985387570" target="_blank" class="fixed bottom-12 right-12 z-[100] w-20 h-20 bg-green-500 rounded-full flex items-center justify-center text-white text-4xl shadow-[0_25px_60px_-15px_rgba(34,197,94,0.5)] hover:scale-110 active:scale-90 transition-all group animate-float border-4 border-white/20">
+        <i class="bi bi-whatsapp"></i>
+        <span class="absolute right-full mr-8 bg-white/95 backdrop-blur-md text-slate-800 text-[10px] font-black uppercase tracking-widest px-6 py-3 rounded-2xl shadow-2xl opacity-0 group-hover:opacity-100 transition-all pointer-events-none border border-slate-100 hidden md:block whitespace-nowrap">
+            Fale conosco aqui!
+        </span>
+    </a>
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- SCRIPTS -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if(menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('animate-fade-in');
+            });
+            
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if(!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+
+        // Navbar Scroll Effect
+        const navContainer = document.getElementById('nav-container');
+        const nav = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.remove('py-6');
+                nav.classList.add('py-3');
+                navContainer.classList.add('shadow-2xl', 'bg-white/95', 'rounded-2xl');
+                navContainer.classList.remove('bg-white/70', 'rounded-3xl');
+            } else {
+                nav.classList.add('py-6');
+                nav.classList.remove('py-3');
+                navContainer.classList.add('bg-white/70', 'rounded-3xl');
+                navContainer.classList.remove('shadow-2xl', 'bg-white/95', 'rounded-2xl');
+            }
+        });
+    </script>
+    
+    <style>
+        .stroke-text {
+            -webkit-text-stroke: 1px #0EA5E9;
+            color: transparent;
+        }
+        @media (min-width: 1024px) {
+            .stroke-text {
+                -webkit-text-stroke: 2px #0EA5E9;
+            }
+        }
+    </style>
 </body>
-
 </html>

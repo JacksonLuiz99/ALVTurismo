@@ -1,276 +1,48 @@
+/* Custom Styles for ALV Turismo */
+
 :root {
-    --main-bg-color: #1a3c73;
-    --text-color: #ffffff;
-    --highlight-color: yellow;
-    --social-icon-color: #32d951;
-    --hover-color: #cc4c0d;
+    --ocean-deep: #0F172A;
+    --ocean-blue: #0EA5E9;
+    --sun-gold: #FACC15;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* Estilos Gerais */
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #dff2f1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hero Section */
-.hero {
-    background-image: url('img/logo/back.PNG');
-    height: 60vh;
-    min-height: 300px;
-    background-size: cover;
-    background-position: center;
-    color: #f0f8ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    animation: fadeIn 1.5s ease-in;
+/* Custom Text Effects */
+.stroke-text {
+    -webkit-text-stroke: 1px var(--ocean-blue);
+    color: transparent;
 }
 
-.navbar-toggler {
-
-    background-color: var(--text-color);
-    border: var(--text-color);
+@media (min-width: 1024px) {
+    .stroke-text {
+        -webkit-text-stroke: 2px var(--ocean-blue);
+    }
 }
 
-.logoAlv {
-    border-radius: 8%;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-/* Seções */
-.section {
-    padding: 60px 0;
-    transition: background-color 0.3s ease;
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
 }
 
-.instagram-prompt {
-    background-color: #ffffff;
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    text-align: center;
-    max-width: 400px;
-    transition: transform 0.3s;
 }
 
-.instagram-prompt:hover {
-    transform: scale(1.05);
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ocean-blue);
 }
 
-.instagram-prompt h2 {
-    color: #E1306C;
-    /* Cor do Instagram */
-    font-size: 24px;
-}
-
-.instagram-prompt p {
-    color: #555;
-    margin: 10px 0 20px;
-}
-
-.instagram-prompt a {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #E1306C;
-    /* Cor do botão */
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.instagram-prompt a:hover {
-    background-color: #C02475;
-    /* Cor do botão ao passar o mouse */
-    transform: translateY(-2px);
-}
-
-.menu,
-.contato,
-.sobre,
-.passeio {
-    background-color: var(--main-bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-
-}
-li{
-    display: flex;
-    margin: 20px;
-
-}
-
-#about {
-    padding-bottom: 5px;
-}
-
-#transfer {
-    margin-top: -4%;
-    padding-bottom: 5px;
-}
-
-#navbarNav {
-    justify-content: end;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    max-height: 950px;
-    object-fit: cover;
-}
-
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 100px;
-    height: 100px;
-}
-
-/* Títulos */
-h1,
-h3 {
-    font-size: 50px;
-    color: var(--highlight-color);
-    margin-bottom: 1rem;
-    margin-top: 0px;
-    /* Usando rem */
-}
-
-p {
-    font-size: 20px;
-    font-family: 'Lucida Sans', sans-serif;
-}
-
-.bandeiras {
-    width: 100%;
-    height: 200px;
-}
-
-
-/* Ícones das Redes Sociais */
-.social-icons a {
-    text-align: center;
-    margin-right: 32px;
-    color: var(--social-icon-color);
-    transition: transform 0.3s ease;
-}
-
-.social-icons a:hover {
-    transform: scale(1.1);
-    color: var(--hover-color);
-}
-
-.secao02 {
-    color: #0056b3;
-}
-
-/* Rodapé */
-footer {
-    background-color: var(--main-bg-color);
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
-}
-
-.cadastur {
-    padding-bottom: 16px;
-}
-
-footer p {
-    margin: 0;
-    color: #fdfdfd;
-}
-
-#dev {
-    color: yellow;
-}
-
-#whatsapp,
-.whatsapp-button {
-    position: fixed;
-    transition: all 0.5s ease;
-    background-color: #25d366;
-    display: block;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border-radius: 50px;
-    padding-right: 0;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 30px;
-    bottom: 70px;
-    right: 15px;
-    border: 0;
-    z-index: 9999;
-    line-height: 50px;
-}
-
-#whatsapp,
-.whatsapp-button:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    border-radius: 50%;
-    animation: pulse-border 1500ms ease-out infinite;
-}
-
-#whatsapp:focus,
-.whatsapp-button:focus {
-    border: none;
-    outline: none;
-}
-
-@keyframes pulse-border {
-    0% {
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-        opacity: 0;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-        /* Inicia com a imagem fora da tela */
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        /* Termina com a imagem em sua posição original */
-    }
-}
-
-
-/* Estilo responsivo */
-@media (max-width: 768px) {
-    .hero {
-        height: 50vh;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero {
-        height: 40vh;
-    }
-}
+/* Animations are handled via Tailwind Config in index.html */
